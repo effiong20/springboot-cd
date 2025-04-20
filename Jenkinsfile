@@ -1,5 +1,5 @@
 pipeline {
- agent { label 'build' }
+ agent { label 'demo' }
  parameters {
      password(name: 'PASSWD', defaultValue: 'changemenow', description: 'Please Enter your Gitlab password')
      string(name: 'IMAGETAG', defaultValue: '1', description: 'Please Enter the Image Tag to Deploy?')
