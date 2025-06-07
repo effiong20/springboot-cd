@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: wezvatechdemo
-        image: giftedid/democicd:1
+        image: giftedid/democicd
         ports:
         - containerPort: 8080
