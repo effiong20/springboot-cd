@@ -1,5 +1,5 @@
 pipeline {
- agent { label 'demo' }
+ agent { label 'slave-server' }
  parameters {
      password(name: 'PASSWD', defaultValue: '', description: 'Please Enter your Gitlab password')
      string(name: 'IMAGETAG', defaultValue: '1', description: 'Please Enter the Image Tag to Deploy?')
