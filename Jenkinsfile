@@ -9,7 +9,7 @@ pipeline {
   stage('Deploy')
   {
     steps { 
-        git branch: 'main', credentialsId: 'githubred', url: 'https://github.com/effiong20/springboot-cd.git'
+        git branch: 'main', credentialsId: 'githubcred', url: 'https://github.com/effiong20/springboot-cd.git'
       dir ("./${params.environment}") {
               sh "sed -i 's/image: giftedid.*/image: giftedid\\/democicd:$IMAGETAG/g' deployment.yml" 
 	    }
