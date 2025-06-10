@@ -11,7 +11,7 @@ pipeline {
     steps { 
         git branch: 'main', credentialsId: 'githubcred', url: 'https://github.com/effiong20/springboot-cd.git'
       dir ("./${params.environment}") {
-              sh "sed -i 's/image: giftedid.*/image: giftedid\\/democicd:$IMAGETAG/g' /kubernetes/deployment.yml" 
+              sh "sed -i 's/image: giftedid.*/image: giftedid\\/democicd:$IMAGETAG/g' deployment.yml" 
 	    }
 	    sh 'git commit -a -m "New deployment for Build $IMAGETAG"'
 	    sh "git push https://github.com/effiong20/springboot-cd.git:$PASSWD@github.com/effiong20/springboot-cd.git"
